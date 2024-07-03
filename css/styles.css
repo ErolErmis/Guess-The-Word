@@ -20,14 +20,13 @@ body {
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
-    background: url("images/backgroundImage");
+    background-image: url("../images/backgroundImage.png");
     color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Outfit';
+    src: url(https://fonts.google.com/specimen/Outfit);
     line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
     background-attachment: fixed;
-    background-size: 50px 50px;
+    background-size: cover;
     overflow-x: hidden;
     padding: 4rem;
     display: flex;
@@ -35,96 +34,61 @@ body {
     flex-direction: column;
 }
 
-header {
+#GameBox, #ScrambleWordBox{
+    border-radius: 0.5rem;
+    margin: auto;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
+#GameBox {
+    width:50%;
+    background-color: #0c1121;
+    
+}
+
+#ScrambleWordBox{
+    width: 90%;
+    background-color: #4A5567;
+    margin-top: 2rem;
+    box-shadow: 0px 5px black;
+}
+
+#GameLetters{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color:#97A3B6;
     display: flex;
     justify-content: space-between;
-
+    width:50%;
+    margin: auto;
 }
 
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
-}
-
-main {
+#GameInfo {
+    color: #4A5567;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-.title {
-    position: relative;
-    text-align: center;
+#GameInfo>p, #GameInfo>div>p{
+    font-size: 0.75rem;
+    font-weight:bold;
 }
 
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+#GameInfo>div>#Mistakes{
+    color:#97A3B6;
+}
+#GameInfo>div{
+    display: flex;
+    gap: 10px;
 }
 
 .logo {
-    display: none;
+    display: block;
+    margin: auto;
 }
-
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
-}
-
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
-}
-
-.link-title {
-    font-size: 1.125rem;
-}
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
-  }

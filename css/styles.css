@@ -70,7 +70,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -86,6 +86,22 @@ body {
 #GameInfo>div{
     display: flex;
     gap: 10px;
+}
+
+#GuessArea{
+    display: flex;
+    margin: auto;
+    width: 50%;
+}
+
+.GuessTile{
+    border-style: solid;
+    border-color: #4A5567;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .logo {
